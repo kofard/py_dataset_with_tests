@@ -575,14 +575,14 @@ def test_tree_chaining() -> bool:
 def print_results(msg: str, passes: bool) -> None:
     print(str(msg), 'works!' if passes else "doesn't work :(")
 
-def pytests() -> None:
+"""def pytests() -> None:
     assert test_rotations()
     assert test_insert()
     assert test_insert_and_search()
     assert test_insert_delete()
     assert test_floor_ceil()
     assert test_tree_traversal()
-    assert test_tree_chaining()
+    assert test_tree_chaining()"""
 
 def main() -> None:
     print_results('Rotating right and left', test_rotations())

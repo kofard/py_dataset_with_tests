@@ -54,28 +54,3 @@ def miller_rabin(n: int, allow_probable: bool=False) -> bool:
             continue
         return False
     return True
-
-def test_miller_rabin() -> None:
-    """Testing a nontrivial (ends in 1, 3, 7, 9) composite
-    and a prime in each range.
-    """
-    assert not miller_rabin(561)
-    assert miller_rabin(563)
-    assert not miller_rabin(838201)
-    assert miller_rabin(838207)
-    assert not miller_rabin(17316001)
-    assert miller_rabin(17316017)
-    assert not miller_rabin(3078386641)
-    assert miller_rabin(3078386653)
-    assert not miller_rabin(1713045574801)
-    assert miller_rabin(1713045574819)
-    assert not miller_rabin(2779799728307)
-    assert miller_rabin(2779799728327)
-    assert not miller_rabin(113850023909441)
-    assert miller_rabin(113850023909527)
-    assert not miller_rabin(1275041018848804351)
-    assert miller_rabin(1275041018848804391)
-    assert not miller_rabin(79666464458507787791867)
-    assert miller_rabin(79666464458507787791951)
-    assert not miller_rabin(552840677446647897660333)
-    assert miller_rabin(552840677446647897660359)

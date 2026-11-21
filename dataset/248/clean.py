@@ -124,7 +124,3 @@ class ShuffledShiftCipher:
             position = self.__key_list.index(i)
             encoded_message += self.__key_list[(position + self.__shift_key) % len(self.__key_list)]
         return encoded_message
-
-def test_end_to_end(msg: str='Hello, this is a modified Caesar cipher') -> str:
-    cip1 = ShuffledShiftCipher()
-    return cip1.decrypt(cip1.encrypt(msg))

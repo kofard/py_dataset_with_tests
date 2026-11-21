@@ -73,10 +73,3 @@ def total_time(init_velocity: float, angle: float) -> float:
     check_args(init_velocity, angle)
     radians = deg_to_rad(angle)
     return round(2 * init_velocity * sin(radians) / g, 2)
-
-def test_motion() -> None:
-    """Test motion"""
-    v0, angle = (25, 20)
-    assert horizontal_distance(v0, angle) == 40.97
-    assert max_height(v0, angle) == 3.73
-    assert total_time(v0, angle) == 1.74

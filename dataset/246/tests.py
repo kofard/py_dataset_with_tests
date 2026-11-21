@@ -9,3 +9,5 @@ globals().update({k: v for k, v in vars(_module).items() if not k.startswith("__
 def test_solution():
     assert SHA1Hash(bytes('Allan', 'utf-8')).final_hash() == '872af2d8ac3d8695387e7c804bf0e02c18df9e6e'
     assert SHA1Hash('').rotate(12,2) == 48
+    msg = b'Test String'
+    assert SHA1Hash(msg).final_hash() == hashlib.sha1(msg).hexdigest()

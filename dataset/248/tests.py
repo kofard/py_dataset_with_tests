@@ -7,7 +7,9 @@ _spec.loader.exec_module(_module)
 globals().update({k: v for k, v in vars(_module).items() if not k.startswith("__")})
 
 def test_solution():
-    assert test_end_to_end() == 'Hello, this is a modified Caesar cipher'
+    msg: str = 'Hello, this is a modified Caesar cipher'
+    cip1 = ShuffledShiftCipher()
+    assert cip1.decrypt(cip1.encrypt(msg)) == 'Hello, this is a modified Caesar cipher'
     ssc = ShuffledShiftCipher('4PYIXyqeQZr44')
     assert ssc.decrypt("d>**-1z6&'5z'5z:z+-='$'>=zp:>5:#z<'.&>#") == 'Hello, this is a modified Caesar cipher'
     ssc = ShuffledShiftCipher('4PYIXyqeQZr44')

@@ -104,9 +104,6 @@ class SHA1Hash:
             self.h = (self.h[0] + a & 4294967295, self.h[1] + b & 4294967295, self.h[2] + c & 4294967295, self.h[3] + d & 4294967295, self.h[4] + e & 4294967295)
         return ('{:08x}' * 5).format(*self.h)
 
-def test_sha1_hash() -> None:
-    msg = b'Test String'
-    assert SHA1Hash(msg).final_hash() == hashlib.sha1(msg).hexdigest()
 
 def main() -> None:
     """

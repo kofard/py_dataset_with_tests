@@ -13,4 +13,7 @@ def test_solution():
     assert max_height(100, 78) == 487.82
     assert total_time(30, 45) == 4.33
     assert total_time(100, 78) == 19.95
-    test_motion()
+    v0, angle = (25, 20)
+    assert horizontal_distance(v0, angle) == 40.97
+    assert max_height(v0, angle) == 3.73
+    assert total_time(v0, angle) == 1.74
